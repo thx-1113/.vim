@@ -51,8 +51,8 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> [B :blast<CR>
-nnoremap <silent> <leader>f :NERDTreeToggle<CR>
-nnoremap <silent> <leader>v :NERDTreeFind<CR>
+"nnoremap <silent> <leader>f :NERDTreeToggle<CR>
+"nnoremap <silent> <leader>v :NERDTreeFind<CR>
 nnoremap <leader>p :Tabular rockets<CR>
 
 inoremap <up> <nop>
