@@ -40,3 +40,9 @@
 [submodule "bundle/vim-vinegar"]
 	path = pack/bundle/start/vim-vinegar
 	url = git://github.com/tpope/vim-vinegar.git
+[submodule "pack/bundle/start/ale"]
+	path = pack/bundle/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "pack/bundle/start/SimpylFold"]
+	path = pack/bundle/start/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
