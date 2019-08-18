@@ -46,3 +46,12 @@
 [submodule "pack/bundle/start/SimpylFold"]
 	path = pack/bundle/start/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "pack/bundle/start/goyo.vim"]
+	path = pack/bundle/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "pack/bundle/start/limelight.vim"]
+	path = pack/bundle/start/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "pack/bundle/start/vim-markdown"]
+	path = pack/bundle/start/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
