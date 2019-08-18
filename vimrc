@@ -65,8 +65,10 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-nnoremap j gj
+nnoremap <up> gk
+nnoremap <down> gj
 nnoremap k gk
+nnoremap j gj
 
 let g:lightline = {
       \ 'active': {
@@ -77,7 +79,8 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-let vim_markdown_preview_perl=1
+"let vim_markdown_preview_perl=1
+let vim_markdown_preview_pandoc=1
 
 "Folding
 set foldlevelstart=99
@@ -89,4 +92,9 @@ nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
 nmap <silent> ]W <Plug>(ale_last)
+
+"Distraction-free
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_conceal_ctermfg = 'DarkGrey'
 
