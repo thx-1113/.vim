@@ -3,8 +3,8 @@ set hidden
 set modelines=0
 syntax enable
 set background=dark
-colorscheme gruvbox
-set guifont=Menlo:h13
+colorscheme solarized
+set guifont=Menlo:h14
 "inoremap jj <ESC>
 filetype plugin indent on
 set tabstop=4
@@ -53,6 +53,8 @@ nnoremap <silent> <leader>x :bd<CR>
 nnoremap <leader>t :tabnew<CR>
 "Create a new split with focus
 nnoremap <leader>w <C-w>v<C-w>l
+"Close the current split
+nnoremap <leader>q <C-w>q
 
 "Manage vimrc in real-time
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -83,6 +85,10 @@ nnoremap <up> gk
 nnoremap <down> gj
 nnoremap k gk
 nnoremap j gj
+
+"Highlight trailing whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "Status line
 let g:lightline = {
@@ -118,3 +124,20 @@ let g:limelight_conceal_ctermfg = 'DarkGrey'
 
 "Strip extra white space
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+"PEP-8 format settings for Python
+au BufNewFile,BufRead *.py;
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+"Format settinngs for html / js / css
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
