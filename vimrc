@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 set hidden
 set modelines=0
 syntax enable
@@ -34,6 +35,12 @@ set showmatch
 set hlsearch
 set splitbelow
 set splitright
+set autoread
+set cursorline
+set title
+set directory=$HOME/.vim/swp//
+"set undofile
+"set undodir=~/.vim/undodir
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
@@ -111,7 +118,8 @@ let g:SimpylFold_docstring_preview = 1
 nnoremap <space> za
 
 "ALE
-let g:ale_linters = {'python':['flake8']}
+let g:ale_linters = {'python':['flake8', 'pylint']}
+let g:ale_python_pylint_options = '-d design,C0111,E0401,R0201'
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
 nmap <silent> ]w <Plug>(ale_next)
